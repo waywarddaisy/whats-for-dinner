@@ -1,0 +1,121 @@
+.find-meals-container {
+    margin-top: 3rem;
+    width: 100%;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        color: #3167af;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 2rem;
+    }
+
+    label,
+    select {
+        font-family: 'Bitter', serif;
+        margin-right: 1rem;
+        font-size: 1.5rem;
+        padding: .5rem 1rem;
+        border-radius: 5%;
+        color: #118f69;
+    }
+
+    select {
+        border: #3167af dotted;
+    }
+
+    .filter-meals {
+        margin-top: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    
+
+    .my-options {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 2%;
+
+    }
+
+    .options-container {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-auto-rows: 200px;
+    }
+
+   
+
+    .large-button {
+        background-color: #f35a32;
+        border: none;
+        font-family: 'Bitter', serif;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 1.5rem;
+        padding: .75rem 1rem;
+        color: white;
+        width: 250px;
+    }
+
+    .large-button:hover{
+        background-color: white;
+        color: #f35a32;
+    }
+
+    .large-button:active{
+        border: dotted #f35a32 3px;
+}
+}
+
+
+.meals-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+
+}
+#my-meals {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 250px;
+}
+
+  
+  .plan-grocery-container{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1.25fr 1.25fr 1.25fr;
+    grid-gap: 1rem;
+    margin-top: 3rem;
+    
+  
+  }
+
+  .grocery-list {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+  }
+
+
+
+  

@@ -1,0 +1,53 @@
+.contact-container {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5%;
+
+    h1 {
+        color: #3167af;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 4rem;
+    }
+
+    h1:hover {
+        color: #fefc8b;
+    }
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+
+    .info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    label {
+        margin: 0;
+    }
+    input {
+        border: none;
+        height: 2rem;
+        width: 13rem;
+        
+    }
+    textarea {
+        margin-top: 3rem;
+        border: dotted #3167af;
+    }
+
+    button {
+        margin-top: 3rem;
+    }
+}
+

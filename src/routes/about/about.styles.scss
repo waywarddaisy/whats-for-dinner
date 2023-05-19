@@ -1,0 +1,95 @@
+
+.about-page {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin-bottom: 5rem;
+}
+.about-container {
+    margin: 15rem 0% 0% 0%;
+    padding: 0%;
+    width: 100%;
+    color: black;
+    font-size: 1rem;
+    display: flex;
+    flex-wrap: nowrap;
+
+    .about-text {
+  
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        color: #0b4da3;
+        font-family: 'Bitter', serif;
+        font-weight: 500;
+        letter-spacing: 1.65px;
+        line-height: 1.85rem;
+        font-size: 1.2rem;
+
+span {
+   font-family: 'Work Sans', sans-serif;
+   font-size: 3rem;
+}
+ h1 {
+    margin: 5% auto;
+ }
+
+ p {
+    margin: 1.5% 15%;
+    text-indent: 5%;
+ }
+
+ h1:hover {
+    color: #fefc8b;
+ }
+ p:hover {
+    color: #118f69;
+ }
+    }
+
+
+    .about-image {
+        // margin-top: 8%;
+        width: 45%;
+        height: 80%;
+        overflow: hidden;
+
+        #image-about {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 50%;
+           
+        }
+    }
+}
+
+.how-it-works {
+   margin-top: -5%;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   color: #0b4da3;
+   font-family: 'Bitter', serif;
+   font-weight: 500;
+   letter-spacing: 1.65px;
+   line-height: 1.85rem;
+   font-size: 1.2rem;
+
+   h1 {
+      margin-left: 15%;
+   }
+  
+   p {
+      margin: 1% 8%;
+      text-indent: 5%;
+   }
+  
+   h1:hover {
+      color: #fefc8b;
+   }
+   p:hover {
+      color: #118f69;
+   }
+}

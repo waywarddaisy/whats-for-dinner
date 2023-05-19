@@ -2,7 +2,8 @@ const GroceryList =()=> {
 
     return (
         <div>
-            Grocery List
+            <h4></h4>
+            <div></div>
         </div>
     )
 };

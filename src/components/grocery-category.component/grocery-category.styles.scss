@@ -1,0 +1,96 @@
+
+.grocery-category-item {
+    background-color: white;
+    // width: 400px;
+    margin: 1rem;
+    border-radius:2%;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    border: dotted #3167af 2px;
+    
+    
+    .text-container {
+        width: 90%;
+        margin: 5%;
+        
+    }
+    
+    h4 {
+        font-size: 2rem; 
+        margin: 0 0 1rem 0;
+        color: #3167af;
+        text-decoration: underline;
+        text-align: center;
+    }
+    
+    .grocery-items {
+        font-size: 1rem;
+        margin: 0;
+        color: #3167af;
+        
+      
+    }
+    
+    .smallXButton {
+        // background-color: #fefc8b;
+        padding: .2rem .5rem;
+        margin-top: .75rem;
+        font-size: 1rem;
+        // color: #98d9ec;
+        font-weight: bold;
+        background-color: #98d9ec;
+        border: none;
+        font-family: 'Bitter', serif;
+        border-radius: 20px;
+        text-decoration: none;
+        color: white;
+    }
+    
+    .smallXButton:hover {
+        background-color: #98d9ec;
+        border: dotted #3167af 3px;
+        color: #3167af;
+    }
+    
+    .smallXButton:active {
+        color: white;
+        border: dotted white 3px;
+    }
+    
+    }
+
+  
+    .ingredients {
+        color: #3167af;
+        font-weight: bold;
+        margin-bottom: .75rem;
+        font-size: .95rem;
+    }
+
+    .add-ingredient-button {
+        padding: 1rem 1rem;
+        margin-top: .75rem;
+        font-size: 1rem;
+        font-weight: bold;
+        background-color: #98d9ec;
+        border: none;
+        font-family: 'Bitter', serif;
+        border-radius: 20px;
+        text-decoration: none;
+        color: white;
+
+        .add-ingredient-button:hover {
+            background-color: #98d9ec;
+            border: dotted #3167af 3px;
+            color: #3167af;
+        }
+        
+        .add-ingredient-button:active {
+            color: white;
+            border: dotted white 3px;
+        }
+
+    }
