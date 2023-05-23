@@ -1,0 +1,62 @@
+.add-ingredient-container {
+    
+    display: flex;
+    flex-direction: column;
+    background-color: beige;
+    padding: 1rem;
+    margin: 0;
+    width: 90%;
+    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+    
+
+    select, input {
+        border: none;
+        font-size: .75rem;
+        margin: 0;
+       margin-right: 1rem;
+        width: 90%;
+        font-family: 'Bitter', serif;
+        
+    }
+
+    .add-ing-top-row, .add-ing-second-row{
+
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 1rem;
+
+    }
+
+    label {
+        font-size: .90rem;
+        padding: .25rem;
+        font-family: 'Work Sans', sans-serif;
+    }
+
+   button {
+        padding: .75rem .75rem;
+        font-size: 1rem;
+        font-weight: bold;
+        background-color: #98d9ec;
+        border: none;
+        font-family: 'Bitter', serif;
+        border-radius: 20px;
+        text-decoration: none;
+        color: white;
+        width: 80px;
+
+    button:hover {
+            background-color: #98d9ec;
+            border: dotted #3167af 3px;
+            color: #3167af;
+        }
+        
+  button:active {
+            color: white;
+            border: dotted white 3px;
+        }
+
+    }
+}

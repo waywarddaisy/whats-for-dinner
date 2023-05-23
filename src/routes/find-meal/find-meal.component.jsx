@@ -128,6 +128,9 @@ const FindMeals = () => {
         let categories = [];
         categories.push(produce, spiceOils, dairy, meatSeafood, deli, dryGoods, cannedJarredGoods, frozenFoods, bakery, condiments, refrigerated);
         setGroceryCategories(categories);
+        console.log(categories, 'line 131 find-meal');
+        console.log(ingredientsList, 'line 132 ingredients list');
+        console.log(getGroceryList(), 'line 133');
     };
 
 
@@ -178,7 +181,7 @@ const FindMeals = () => {
                         {/* {ingredientsList.map(item => <div>{item.name} {item.amount} {item.unit} <button type="button" onClick={()=>{deleteIngredient(item)}}>x</button></div>)} */}
 
                       {groceryCategories.map((item)=> {if (item.length>0){
-                      return <GroceryCategory category = {item[0].category} item = {item} deleteIngredient={deleteIngredient}/>}})}
+                      return <GroceryCategory category = {item[0].category} item = {item} deleteIngredient={deleteIngredient} groceryCategories={groceryCategories} setGroceryCategories={setGroceryCategories}/>}})}
                     
 
                  

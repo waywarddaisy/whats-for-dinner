@@ -1,9 +1,11 @@
 
 import './grocery-category.styles.scss';
-import Ingredient from '../ingredient.component/ingredient.component';
+import AddIngredient from '../add-ingredient.component/add-ingredient.component';
 
-const GroceryCategory=({category, item, deleteIngredient})=>{
-    const addIngredient =()=>{};
+
+
+const GroceryCategory=({category, item, deleteIngredient, groceryCategories, setGroceryCategories})=>{
+   
 
     return (
         <div className='grocery-category-item'>
@@ -13,6 +15,7 @@ const GroceryCategory=({category, item, deleteIngredient})=>{
             {item.map(ing =>  <div className='ingredients'>{ing.name} {ing.amount} {ing.unit} <button className="smallXButton" onClick={()=>{deleteIngredient(ing, item)}}>x</button></div>)}
             </div>
             <button type="button" className="add-ingredient-button">Add Ingredient</button>
+           <AddIngredient groceryCategories={groceryCategories} setGroceryCategories ={setGroceryCategories} item={item}/>
             </div>
         </div>
     )
