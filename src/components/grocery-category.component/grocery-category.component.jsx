@@ -1,11 +1,16 @@
 
 import './grocery-category.styles.scss';
 import AddIngredient from '../add-ingredient.component/add-ingredient.component';
+import { useState } from 'react';
 
 
 
 const GroceryCategory=({category, item, deleteIngredient, groceryCategories, setGroceryCategories})=>{
-   
+const [isShown, setIsShown]= useState(false);   
+
+const handleClick = (event)=> {
+    setIsShown(true);
+};
 
     return (
         <div className='grocery-category-item'>
@@ -14,8 +19,8 @@ const GroceryCategory=({category, item, deleteIngredient, groceryCategories, set
             <div className='grocery-items'>
             {item.map(ing =>  <div className='ingredients'>{ing.name} {ing.amount} {ing.unit} <button className="smallXButton" onClick={()=>{deleteIngredient(ing, item)}}>x</button></div>)}
             </div>
-            <button type="button" className="add-ingredient-button">Add Ingredient</button>
-           <AddIngredient groceryCategories={groceryCategories} setGroceryCategories ={setGroceryCategories} item={item}/>
+            <button type="button" className="add-ingredient-button" onClick ={handleClick}>Add Ingredient</button>
+          { isShown && <AddIngredient groceryCategories={groceryCategories} setGroceryCategories ={setGroceryCategories} item={item} isShown={isShown} setIsShown={setIsShown}/>}
             </div>
         </div>
     )
