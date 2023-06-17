@@ -1,0 +1,32 @@
+
+
+.print-page-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.large-button  {
+    background-color: #fb7c27;
+    border: none;
+    font-family: 'Bitter', serif;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: .75rem 1rem;
+    color: white;
+    width: 250px;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+.large-button:hover{
+    background-color: white;
+    color: #f35a32;
+}
+
+.large-button:active{
+    border: dotted #f35a32 3px;
+}
+

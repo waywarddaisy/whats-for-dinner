@@ -15,7 +15,7 @@ const Contact = ()=> {
                 </div>
                 <textarea name="" id="" cols="80" rows="30"></textarea>
 
-                <button>Send</button>
+                <button type="button" className="large-button">Send</button>
 
             </form>
         </div>

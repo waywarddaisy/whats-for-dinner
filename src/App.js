@@ -9,10 +9,20 @@ import CookbookShop from './routes/cookbook-shop/cookbook-shop.component'
 import Contact from './routes/contact/contact.component';
 import './App.scss'
 import Authentication from './routes/authentication/authentication.component';
+import ParentPrint from './components/react-to-print.component/parent-print.component';
+import ProductPage from './routes/product-page/product-page.component';
+import { useState } from 'react';
 
 
 
 const App = () => {
+
+  const [shoppingCart, setShoppingCart]= useState([]);
+
+  const addToCart =(cartItem)=>{
+    setShoppingCart([...shoppingCart, cartItem])
+  };
+
 
   return (
     
@@ -23,7 +33,9 @@ const App = () => {
         {/* <Route path="add-recipe" element={<AddRecipe />} /> */}
         <Route path="find-meals" element={<FindMeals />} />
         <Route path="cooking-shop" element={<CookbookShop />} />
+        <Route path="product-page/:id" element={<ProductPage addToCart={addToCart}/>} />
         <Route path="contact" element={<Contact />} />
+        <Route path="print" element={<ParentPrint />} />
         {/* <Route path="auth" element={<Authentication/>} /> */}
         </Route>
     </Routes>

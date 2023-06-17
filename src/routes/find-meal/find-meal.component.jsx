@@ -1,19 +1,25 @@
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import ReactToPrint from 'react-to-print';
 import './find-meal.styles.scss';
 import OptionsCard from '../../components/options-card.component/options-card.component';
 import MyMealsCard from '../../components/mymeals-card.component/mymeals-card.component';
 import GroceryCategory from '../../components/grocery-category.component/grocery-category.component';
+import Print from '../../components/react-to-print.component/react-to-print';
+import ParentPrint from '../../components/react-to-print.component/parent-print.component';
+import { Link } from 'react-router-dom';
 
 
 const FindMeals = () => {
 
+    const printRef = useRef();
     const [season, setSeason] = useState('');
     const [showOptions, setShowOptions] = useState(false);
     const [recipeList, setRecipeList] = useState([]);
     const [myMeals, setMyMeals] = useState([]);
     const [ingredientsList, setIngredientsList] = useState([]);
     const [groceryCategories, setGroceryCategories] = useState([]);
+    const [showPrint, setShowPrint] = useState(false);
 
     useEffect(() => {
         const getRecipes = async () => {
@@ -92,16 +98,10 @@ const FindMeals = () => {
             let clone = {...ingOnList};
             newList.push(clone)
         }
-        setIngredientsList(newList);    
         
+
+        return newList;
     };
-
-    // const showGroceryList =()=>{
-    //     getGroceryList();
-    //     // setDairyList(...ingredientsList.filter(ing => ing.category ==='Dairy'));
-     
-    // };
-
 
     const deleteIngredient = (key, item) => {
          let tempList =[...groceryCategories];
@@ -112,25 +112,24 @@ const FindMeals = () => {
     };
 
     const aisleCategories =()=>{
-        getGroceryList();
-        let produce = ingredientsList.filter(item => item.category === 'Produce');
-        let spiceOils = ingredientsList.filter(item => item.category === "Spice/Oils");
-        let dairy = ingredientsList.filter(item => item.category === 'Dairy');
-        let meatSeafood = ingredientsList.filter(item => item.category === "Meat/Seafood");
-        let deli = ingredientsList.filter(item => item.category === "Deli");
-        let dryGoods = ingredientsList.filter(item => item.category === "Dry Goods");
-        let cannedJarredGoods = ingredientsList.filter(item => item.category === "Canned/Jarred Goods");
-        let frozenFoods = ingredientsList.filter(item => item.category === "Frozen Foods");
-        let bakery = ingredientsList.filter(item => item.category === "Bakery");
-        let condiments = ingredientsList.filter(item => item.category === "Condiment/s");
-        let refrigerated = ingredientsList.filter(item => item.category === "Refrigerated");
+        const newList = getGroceryList();
+        setIngredientsList(newList); 
+        let produce = newList.filter(item => item.category === 'Produce');
+        let spiceOils = newList.filter(item => item.category === "Spice/Oils");
+        let dairy = newList.filter(item => item.category === 'Dairy');
+        let meatSeafood = newList.filter(item => item.category === "Meat/Seafood");
+        let deli = newList.filter(item => item.category === "Deli");
+        let dryGoods = newList.filter(item => item.category === "Dry Goods");
+        let cannedJarredGoods = newList.filter(item => item.category === "Canned/Jarred Goods");
+        let frozenFoods = newList.filter(item => item.category === "Frozen Foods");
+        let bakery = newList.filter(item => item.category === "Bakery");
+        let condiments = newList.filter(item => item.category === "Condiment/s");
+        let refrigerated = newList.filter(item => item.category === "Refrigerated");
 
         let categories = [];
         categories.push(produce, spiceOils, dairy, meatSeafood, deli, dryGoods, cannedJarredGoods, frozenFoods, bakery, condiments, refrigerated);
         setGroceryCategories(categories);
-        console.log(categories, 'line 131 find-meal');
-        console.log(ingredientsList, 'line 132 ingredients list');
-        console.log(getGroceryList(), 'line 133');
+        setShowPrint(true);
     };
 
 
@@ -175,16 +174,21 @@ const FindMeals = () => {
                     </div>
                 </div>
                 <div className='grocery-list'>
-                    <button type='button' className ="large-button" onClick={() => { aisleCategories() }}>Create Grocery List</button>
+                    <button type='button' className ="large-button" onClick={() => { aisleCategories() }}>View Grocery List</button>
                     <div className='plan-grocery-container'>
 
                         {/* {ingredientsList.map(item => <div>{item.name} {item.amount} {item.unit} <button type="button" onClick={()=>{deleteIngredient(item)}}>x</button></div>)} */}
 
                       {groceryCategories.map((item)=> {if (item.length>0){
-                      return <GroceryCategory category = {item[0].category} item = {item} deleteIngredient={deleteIngredient} groceryCategories={groceryCategories} setGroceryCategories={setGroceryCategories}/>}})}
+                      return <GroceryCategory category = {item[0].category} item = {item} deleteIngredient={deleteIngredient} 
+                      groceryCategories={groceryCategories} setGroceryCategories={setGroceryCategories}/>}})}
                     
 
                  
+                    </div>
+                    <div>
+                        {showPrint && <Link to="/print" state={{myMeals, groceryCategories}} ><button className ="large-button" type="button">Preview Meal Plan & Grocery List</button></Link>}
+
                     </div>
                 </div>
 

@@ -20,7 +20,8 @@ const handleClick = (event)=> {
             {item.map(ing =>  <div className='ingredients'>{ing.name} {ing.amount} {ing.unit} <button className="smallXButton" onClick={()=>{deleteIngredient(ing, item)}}>x</button></div>)}
             </div>
             <button type="button" className="add-ingredient-button" onClick ={handleClick}>Add Ingredient</button>
-          { isShown && <AddIngredient groceryCategories={groceryCategories} setGroceryCategories ={setGroceryCategories} item={item} isShown={isShown} setIsShown={setIsShown}/>}
+          { isShown && <AddIngredient groceryCategories={groceryCategories} 
+          setGroceryCategories ={setGroceryCategories} item={item} isShown={isShown} setIsShown={setIsShown}/>}
             </div>
         </div>
     )

@@ -63,6 +63,7 @@ const AddIngredient = ({ groceryCategories, setGroceryCategories, isShown, setIs
         setMeasureMethod('');
 
         setIsShown(false);
+        
     }
 
 
