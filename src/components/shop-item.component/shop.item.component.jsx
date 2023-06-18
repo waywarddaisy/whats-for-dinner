@@ -14,7 +14,7 @@ const ShopItem = () => {
             <div className='shop-grid'>
                 {productsArray.map(item => {
                     return (
-                        <Link to={`/product-page/${item.id}`} key= {item.id}><div className='product-container'>
+                        <Link to={`/product-page/${item.id}`} key= {item.id}><div className='product-container shop-grid'>
 
                             <img src={item.photo} />
                             <div className='namedescription'>{item.name}</div>

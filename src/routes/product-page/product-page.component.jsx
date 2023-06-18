@@ -11,8 +11,9 @@ const ProductPage = ({ addToCart }) => {
     console.log(typeof id);
     const [product, setProduct] = useState(null);
     useEffect(() => {
-        const displayProduct = productsArray.find(prod => prod.id == id);
+        let displayProduct = productsArray.find(prod => prod.id == id);
         console.log(displayProduct);
+        displayProduct.cartQuantity =1;
         setProduct(displayProduct)
     }, [id]);
 

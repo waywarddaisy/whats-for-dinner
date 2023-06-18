@@ -1,6 +1,8 @@
 import { Fragment } from "react";
 import { Outlet, Link } from "react-router-dom";
 import './navigation.component.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSolid, faCartShopping } from '@fortawesome/free-solid-svg-icons'
 
 const Navigation = () => {
 
@@ -42,6 +44,9 @@ const Navigation = () => {
                         </Link>
                         <Link className="nav-link" to="/contact">
                         CONTACT
+                        </Link>
+                        <Link className="nav-link" to="/shopping-cart">
+                        <FontAwesomeIcon icon={faCartShopping} />
                         </Link>
                         {/* <Link className="nav-link" to="/auth">
                         SIGN IN

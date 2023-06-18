@@ -1,15 +1,26 @@
 .home-container {
-    margin: 5% 0;
+    margin: 10% 10%;
     display: flex;
+    flex-direction: row;
     width: 100%;
     justify-content: center;
+    color: white;
     
-    
-    
+}
+
+// img {
+//     width: 50%;
+//     height: 100%;
+//     transform: rotate(90deg);
+// }
+
+img {
+    width: 50%;
+    height: 100%;
 
 }
 
-img {
-    width: 90%;
-    height: 90%;
+.home-title {
+    font-size: 3.35rem;
+    color: #fefc8b;
 }

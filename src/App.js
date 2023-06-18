@@ -3,7 +3,8 @@ import { Routes, Route } from 'react-router-dom';
 import Navigation from './routes/navigation/navigation.component'
 import Home from './routes/home/home.component'
 import About from './routes/about/about.component'
-import AddRecipe from './routes/add-recipe/add-recipe.component'
+import AddRecipe from './routes/add-recipe/add-recipe.component';
+import ShoppingCart from './routes/shopping cart/shopping-cart.component';
 import FindMeals from './routes/find-meal/find-meal.component'
 import CookbookShop from './routes/cookbook-shop/cookbook-shop.component'
 import Contact from './routes/contact/contact.component';
@@ -36,6 +37,7 @@ const App = () => {
         <Route path="product-page/:id" element={<ProductPage addToCart={addToCart}/>} />
         <Route path="contact" element={<Contact />} />
         <Route path="print" element={<ParentPrint />} />
+        <Route path="shopping-cart" element={<ShoppingCart shoppingCart={shoppingCart} setShoppingCart={setShoppingCart}/>} />
         {/* <Route path="auth" element={<Authentication/>} /> */}
         </Route>
     </Routes>
