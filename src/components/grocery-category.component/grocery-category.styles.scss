@@ -95,3 +95,11 @@
         }
 
     }
+
+    @media only screen and (max-width: 750px) and (min-width: 320px) {
+
+        .grocery-category-item {
+            border-radius:0%;
+        }
+
+    }

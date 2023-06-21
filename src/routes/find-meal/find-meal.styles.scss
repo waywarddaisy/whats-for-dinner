@@ -36,7 +36,7 @@
         width: 100%;
     }
 
-    
+
 
     .my-options {
         display: flex;
@@ -55,9 +55,9 @@
         grid-auto-rows: 200px;
     }
 
-   
 
-    .large-button  {
+
+    .large-button {
         // background-color: #f35a32;
         background-color: #fb7c27;
         border: none;
@@ -71,14 +71,14 @@
         margin-top: 1rem;
     }
 
-    .large-button:hover{
+    .large-button:hover {
         background-color: white;
         color: #f35a32;
     }
 
-    .large-button:active{
+    .large-button:active {
         border: dotted #f35a32 3px;
-}
+    }
 }
 
 
@@ -88,27 +88,28 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    
+
 
 }
+
 #my-meals {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-auto-rows: 250px;
 }
 
-  
-  .plan-grocery-container{
+
+.plan-grocery-container {
     width: 90%;
     display: grid;
     grid-template-columns: 1.25fr 1.25fr 1.25fr;
     grid-gap: 1rem;
     margin-top: 3rem;
-    
-  
-  }
 
-  .grocery-list {
+
+}
+
+.grocery-list {
 
     width: 100%;
     display: flex;
@@ -116,9 +117,126 @@
     align-items: center;
 
 
-  }
+}
 
 
+@media only screen and (max-width: 500px) and (min-width: 320px) {
+
+    .find-meals-container {
+
+        h2 {
+
+            font-size: 1.5rem;
+        }
+
+        .season-input {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .options-container,
+        #my-meals {
+
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-auto-rows: 200px;
+
+        }
+
+        .plan-grocery-container {
+
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
 
 
-  
+        }
+    }
+}
+
+@media only screen and (max-width: 750px) and (min-width: 501px) {
+
+    .find-meals-container {
+
+        h2 {
+
+            font-size: 1.5rem;
+        }
+
+        .season-input {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .options-container,
+        #my-meals {
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: 200px;
+
+        }
+
+        .plan-grocery-container {
+
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+
+        }
+
+
+    }
+}
+
+@media only screen and (max-width: 1050px) and (min-width: 751px) {
+
+    .find-meals-container {
+
+
+        .options-container, #my-meals {
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-auto-rows: 200px;
+
+
+        }
+
+        .plan-grocery-container {
+            width: 90%;
+            display: grid;
+            grid-template-columns: 1.25fr 1.25fr;
+            grid-gap: 1rem;
+            margin-top: 3rem;
+        
+        
+        }
+    }
+    }
+
+
+@media only screen and (max-width: 1330px) and (min-width: 1051px) {
+
+    .find-meals-container {
+
+
+        .options-container, #my-meals {
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-auto-rows: 200px;
+
+
+        }
+    }
+    }

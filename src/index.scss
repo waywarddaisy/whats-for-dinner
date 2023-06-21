@@ -2,6 +2,7 @@
 
 body {
   margin: 0;
+
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -21,9 +22,10 @@ a {
 }
 
 body {
-  display: flex;
-  justify-content: center;
+  // display: flex;
+  // justify-content: center;
   background-color: #98d9ec;
+  width: 100%;
  
  
 }

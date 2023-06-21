@@ -139,7 +139,7 @@ const FindMeals = () => {
             <div className="filter-meals">
                 <h2>1. Select Meal Season</h2>
                 <div className="season-input">
-                    <label htmlFor="season">Season</label>
+                   
                     <select name="season" id="season" onChange={(e) => setSeason(e.target.value)}>
                         <option value="">Choose Season</option>
                         <option value="Warm">warm</option>

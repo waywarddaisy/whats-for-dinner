@@ -1,6 +1,7 @@
 
 import './about.styles.scss';
 import aboutIMG from '../../assets/aboutimg.jpg';
+import { Link } from 'react-router-dom';
 
 const About = () => {
 
@@ -8,23 +9,40 @@ const About = () => {
         <div className='about-page'>
             <div className="about-container">
                 <div className='about-text'>
-                    {/* <h1>Hey there!</h1> */}
-                    <p><span>Hi there! </span>I created this site to help solve the much asked and less often answered question
-                        "What's for Dinner?"</p>
-                    <p>The mere asking of this question can cause chaos, mental-breakdown, murderous thoughts, depression and divorce.
-                        The making of the dinner itself is its own kind of ordeal but from my perspective it doesn't come close to the
-                        stress of planning and shopping which often require one to use brain cells that are not available for use at the end of a busy day.
+
+
+                    <p><span>T</span>he making of the dinner itself is its own kind of ordeal but it doesn't come close to the
+                        stress of planning ahead and grocery shopping which often require one to use brain cells that are not available for use at the end of a busy day.</p>
+                    {/* <p>What's for Dinner? The mere asking of this question can cause chaos, mental-breakdown, murderous thoughts, depression and divorce.
+                        
+                    </p> */}
+
+
+                    <p>When I became a developer I decided to make a program that was going to solve this problem once and for all.</p>
+
+                    <p>This site is built around my personal preference which is to cook from my favorite cookbooks, moderately healthy, curated meals from authors that I love.
+                        Its a great excuse to continue to hoard cookbooks guilt-free!  </p>
+
+                    <h1>How it Works</h1>
+
+                    <p><span>1. </span>When you visit the <Link to="/find-meals">What's for Dinner?</Link> page, you'll first choose the season you are in. It includes meal options for cold weather and warm weather,
+                        and recipes that work for both seasons.
                     </p>
 
-                    <p>The question,"What's for dinner?" is the bane of a working women's career and the last straw for a stay-at-home mom who's already made 9,999 meals that day, cleaned up after each one, having
-                        survived herself only on leftover PB&J crusts. Believe me, I know.
-                    </p>
+                    <p><span>2. </span>From there you will select the recipes for your dinners that week. </p>
 
-                    <p>When I became a software developer I decided to make a program that was going to solve this problem once and for all.</p>
+                    <p><span>3. </span>Meal Options. Here you can double or halve a recipe, depending on how many you are serving. </p>
 
-                    <p>This program is built around my personal preference which is to cook from my favorite cookbooks, moderately healthy, curated meals from authors that I love.
-                        I prefer not to use online recipes because unlocking my phone with dirty hands and waiting for ads is just too annoying. I prefer to cook from cookbooks because I LOVE books and its a great excuse for me to continue to hoard them without guilt. Over the years I have curated a small library of favorites.  </p>
+                    <p>Now at the click of a button you will generate an automatic shopping list where you will get an organized list of each ingredient in the recipe and
+                        the amounts of each ingredient required. At this point you are free to remove items you already have on hand,
+                        add new ingredients to the list, etc. The list will be sorted by grocery aisle so you can easily navigate your grocery experience! </p>
 
+                    <p>When you print your list, it will also include a Meal Plan at the top of the page, along with the recipe name, the cookbook its from and its page so you can find it easily come dinner time.</p>
+
+                    <p>Voila! Meal planning completed! If you don't own the cookbooks, you may purchase them from the <Link to="/cooking-shop">Cooking Shop</Link>. This site does not include the recipes,
+                        it only includes the ingredients contained in our curated recipes to automate the shopping list and meal planning aspect.</p>
+
+                    <p>I hope this makes your life easier!</p>
 
 
                 </div>
@@ -34,21 +52,7 @@ const About = () => {
             </div>
 
             <div className='how-it-works'>
-                <h1>How it Works</h1>
-                <p>With this site I've taken the names of my favorite recipes and entered them as meal options for you.
-                    I have entered the ingredients as well as their amounts for each recipe.
-                </p>
-                <p>How it works is, you will select a meal or several meals from a curated list of recipes
-                    I have tried myself, love and recommend. When you have selected them, at the click of a button my program will produce a grocery list organized by grocery aisle.
-                    You can then remove the items you already have as well as add any additional items. At the top of the list will also be the names of the recipes you have selected.
-                    This list can be emailed or printed for your use thus saving you hours of making lists, sifting through books and repeat grocery store trips.</p>
 
-                <p>The recipes themselves are however not available on my site as that would be plaguerism. But in my cookbook shop, all of my recommended books are available for sale as well as some
-                    of my most used cooking tools and favorite cooking items! This way you can create and add to your own cookbook library which will give you a break from and overly digital world
-                    and will let you escape into the world of the author with beautiful images and food from their unique life. It is my dream that my children/grandchildren inherit a glorious library of well used cookbooks
-                    that they will always remember me by.
-                </p>
-                <p>P.S. Over the years I have borrowed many cookbooks from my local library where they can usually order any book for you if they don't have it in stock. </p>
             </div>
 
 

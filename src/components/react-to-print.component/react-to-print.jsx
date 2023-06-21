@@ -17,7 +17,7 @@ const Print = React.forwardRef(({ myMeals, groceryCategories }, ref) => {
 
                 {groceryCategories.map((category) => {
                     if (category.length > 0) {
-                        return <div className='aisle-cat-container'><h4>{category[0].category}</h4><div>{category.map((item)=>{return <div>{item.name} {item.amount} {item.unit}</div>})}</div></div>
+                        return <div className='aisle-cat-container'><h4>{category[0].category}</h4><div className='ingredient-print'>{category.map((item)=>{return <div>{item.name} {item.amount} {item.unit}</div>})}</div></div>
                     } else { return null }
                 })}
             </div>
