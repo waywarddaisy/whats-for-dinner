@@ -17,7 +17,7 @@ const Home =()=> {
 
 
             <h1 className='splash-text' id='splash-text-two'>Let's simplify dinner !</h1>
-            
+
             <div className='splash-image'>
            <img src={homeSplash}  className='splash'/>
            </div>

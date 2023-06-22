@@ -41,53 +41,106 @@
 @media only screen and (max-width: 450px) and (min-width: 320px) {
 
     .home-container {
-        margin: 15% 0% 0% 0%;
-        height: 100%;
+        margin: -45% 0% 0% 0%;
+        // width: 560px;
     }
 
     .splash-text {
 
-        margin: -30% 10% 0% 0%;
+        // margin: -30% 10% 0% 5%;
         padding: 0 .5em .25em .5em;
-        font-size: 1rem;
+        font-size: 2rem;
+        width: 400px;
+        // margin: -35% 10% 0% 25%;    
+        margin: -20% 0% 0% 40%;
    
     }
     
     #splash-text-two {
-        margin: 13% 10% 0% -45%;
-        width: 35%;
+        // margin: 55% 10% 0% -35%;
+        width: 400px;
+        margin: 60% 0% 0% 40%;
+
+        
     }
 
     .splash-image {
         width: 100%;
         height: 100%;
-        // transform: rotate(90deg);
+        transform: rotate(90deg);
+
+        img.splash {
+            width: 1300px;
+            height: 100%;
+        }
     }
 }
+
+
+// {
+
+//     .home-container {
+//         margin: 15% 0% 0% 0%;
+//         height: 100%;
+
+        
+//     }
+
+//     .splash-text {
+
+//         margin: -30% 10% 0% 0%;
+//         padding: 0 .5em .25em .5em;
+//         font-size: 1rem;
+   
+//     }
+    
+//     #splash-text-two {
+//         margin: 13% 10% 0% -45%;
+//         width: 35%;
+//     }
+
+//     .splash-image {
+//         width: 100%;
+//         height: 100%;
+        
+//     }
+// }
 
 @media only screen and (max-width: 560px) and (min-width: 451px) {
 
     .home-container {
-        margin: 15% 0% 0% 0%;
+        margin: -25% 0% 0% 0%;
+        // width: 560px;
     }
 
     .splash-text {
 
-        margin: -30% 10% 0% 0%;
+        // margin: -30% 10% 0% 5%;
         padding: 0 .5em .25em .5em;
-        font-size: 1.25rem;
+        font-size: 2rem;
+        width: 400px;
+        // margin: -35% 10% 0% 25%;    
+        margin: -20% 0% 0% 0%;
    
     }
     
     #splash-text-two {
-        margin: 10% 10% 0% -45%;
-        width: 35%;
+        // margin: 55% 10% 0% -35%;
+        width: 400px;
+        margin: 40% 0% 0% 0%;
+
+        
     }
 
     .splash-image {
         width: 100%;
         height: 100%;
-        // transform: rotate(90deg);
+        transform: rotate(90deg);
+
+        img.splash {
+            width: 1300px;
+            height: 100%;
+        }
     }
 }
 
@@ -95,22 +148,33 @@
 @media only screen and (max-width: 775px) and (min-width: 561px) {
 
     .home-container {
-        margin: 15% 0% 0% 0%;
+        margin: 0% 0% 0% 0%;
 
     
     }
 
     .splash-text {
 
-        margin: -30% 10% 0% 0%;
+        margin: -70% 10% 0% 0%;
         padding: 0 .5em .25em .5em;
         font-size: 1.75rem;
    
     }
     
     #splash-text-two {
-        margin: 10% 10% 0% -45%;
+        margin: -25% 10% 0% -45%;
         width: 35%;
+    }
+
+    .splash-image {
+        width: 100%;
+        height: 100%;
+        transform: rotate(90deg);
+
+        img.splash {
+            width: 1300px;
+            height: 100%;
+        }
     }
 }
 
@@ -118,23 +182,34 @@
 @media only screen and (max-width: 1000px) and (min-width: 776px) {
 
     .home-container {
-        margin: 15% 0% 0% 0%;
+        margin: 5% 0% 0% 0%;
 
     
     }
 
     .splash-text {
 
-        margin: -30% 10% 0% 0%;
+        margin: -50% 10% 0% 0%;
         padding: 0 .5em .25em .5em;
         font-size: 2.5rem;
    
     }
     
     #splash-text-two {
-        margin: 15% 10% 0% -45%;
+        margin: 0% 10% 0% -45%;
         width: 35%;
     }
+    .splash-image {
+        width: 100%;
+        height: 100%;
+        transform: rotate(90deg);
+
+        img.splash {
+            width: 1500px;
+            height: 100%;
+        }
+    }
+    
 }
 
 
@@ -163,7 +238,7 @@
 @media only screen and (max-width: 1590px) and (min-width: 1201px) {
 
     .home-container {
-        margin: 12% 0% 0% 0%;
+        margin: 10% 0% 0% 0%;
 
     
     }

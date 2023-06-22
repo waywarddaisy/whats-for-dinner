@@ -1,6 +1,5 @@
 
 import './about.styles.scss';
-import aboutIMG from '../../assets/aboutimg.jpg';
 import { Link } from 'react-router-dom';
 
 const About = () => {
@@ -13,10 +12,6 @@ const About = () => {
 
                     <p><span>T</span>he making of the dinner itself is its own kind of ordeal but it doesn't come close to the
                         stress of planning ahead and grocery shopping which often require one to use brain cells that are not available for use at the end of a busy day.</p>
-                    {/* <p>What's for Dinner? The mere asking of this question can cause chaos, mental-breakdown, murderous thoughts, depression and divorce.
-                        
-                    </p> */}
-
 
                     <p>When I became a developer I decided to make a program that was going to solve this problem once and for all.</p>
 
@@ -47,7 +42,7 @@ const About = () => {
 
                 </div>
                 <div className='about-image'>
-                    <img src={aboutIMG} id="image-about" />
+                    <img src='https://res.cloudinary.com/dw0mjyoeg/image/upload/v1687375127/aboutphoto_ifyvve.jpg' id="image-about" />
                 </div>
             </div>
 

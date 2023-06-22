@@ -32,14 +32,14 @@
     // visibility: hidden;
 }
 
-.navigation {
+div.navigation {
     width: 100%;
-    padding: 0% 0% 2% 0%;
+    // padding: 0% 0% 2% 0%;
     position: fixed;
     z-index: 1000;
     background-color: #98d9ec;
     margin: 0%;
-    padding: 0% 10%;
+    padding: 0% 10% 1em;
 }
 
 #alt-logo-container:hover {
@@ -196,4 +196,12 @@ a:hover {
 
         }
     }
+}
+
+@media only screen and (max-width: 1320px) and (min-width: 831px){
+
+    .alt-logo-container {
+        font-size: 4rem;
+    }
+
 }

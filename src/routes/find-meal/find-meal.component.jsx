@@ -20,6 +20,7 @@ const FindMeals = () => {
     const [ingredientsList, setIngredientsList] = useState([]);
     const [groceryCategories, setGroceryCategories] = useState([]);
     const [showPrint, setShowPrint] = useState(false);
+  
 
     useEffect(() => {
         const getRecipes = async () => {
@@ -36,8 +37,9 @@ const FindMeals = () => {
             ? []
             : recipeList.filter(item => item.season === season || item.season === "both");
 
+   
     const addToMeals = (recipe) => {
-        setMyMeals([...myMeals, recipe])
+        setMyMeals([...myMeals, recipe]);
     };
 
     const deleteMeal = (meal) => {
@@ -154,7 +156,7 @@ const FindMeals = () => {
                     <h2>2. My Options</h2>
                     <div className='options-container' id='options-container'>
                         {showOptions && myOptions.map((option) => {
-                             return <OptionsCard recipe={option} addToMeals={addToMeals} />
+                             return <OptionsCard recipe={option} addToMeals={addToMeals} myMeals={myMeals}/>
                             
                         })}
 
