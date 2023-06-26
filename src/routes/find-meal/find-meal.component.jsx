@@ -24,7 +24,7 @@ const FindMeals = () => {
 
     useEffect(() => {
         const getRecipes = async () => {
-            const response = await fetch('http://localhost:3005/recipes');
+            const response = await fetch('https://wtfdatabase.onrender.com/recipes');
             const data = await response.json();
             console.log(data);
             setRecipeList(data);
