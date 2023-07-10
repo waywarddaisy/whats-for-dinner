@@ -8,6 +8,7 @@ const OptionsCard = ({recipe, addToMeals, optionAdd, setOptionAdd, myMeals})=>{
         <div className='options-card'>
             <div className='options-card-text'>
             <h5>{recipe.name}</h5>
+            <p>{recipe.source}</p>
             <p>by {recipe.author}</p>
             {/* <button type="button" onClick={()=>{addToMeals(recipe)}}>{optionAdd}</button> */}
             <OptionsAddButton recipe = {recipe} addToMeals={addToMeals} myMeals={myMeals}/>

@@ -7,6 +7,7 @@ import MyMealsCard from '../../components/mymeals-card.component/mymeals-card.co
 import GroceryCategory from '../../components/grocery-category.component/grocery-category.component';
 import Print from '../../components/react-to-print.component/react-to-print';
 import ParentPrint from '../../components/react-to-print.component/parent-print.component';
+import Loader from '../../components/loader.component/loader.component';
 import { Link } from 'react-router-dom';
 
 
@@ -20,22 +21,35 @@ const FindMeals = () => {
     const [ingredientsList, setIngredientsList] = useState([]);
     const [groceryCategories, setGroceryCategories] = useState([]);
     const [showPrint, setShowPrint] = useState(false);
+    const [loading, setLoading]= useState(false);
   
 
     useEffect(() => {
         const getRecipes = async () => {
+            
             const response = await fetch('https://wtfdatabase.onrender.com/recipes');
             const data = await response.json();
             console.log(data);
             setRecipeList(data);
+            setLoading(false);     
         }
-        getRecipes();
+        getRecipes();  
+        
     }, []);
+
+    const handleFindRecipes = ()=> {
+        setShowOptions(true); 
+
+        if (recipeList.length === 0){
+            setLoading(true)}
+
+    };
+    
 
     const myOptions = season === "All"
         ? recipeList : (season === '')
             ? []
-            : recipeList.filter(item => item.season === season || item.season === "both");
+          : recipeList.filter(item => item.season === season.toLowerCase() || item.season === "both");
 
    
     const addToMeals = (recipe) => {
@@ -148,8 +162,14 @@ const FindMeals = () => {
                         <option value="Cool">cool</option>
                         <option value="All">all</option>
                     </select>
-                    <button id="findmeals" type="button" className="large-button" onClick={() => { setShowOptions(true) }}>Find Recipes</button>
+                    <button id="findmeals" type="button" className="large-button" onClick={handleFindRecipes}>Find Recipes</button>
+                    <div className='loading'>
+                    {loading && <Loader/>} 
+                    </div>
                 </div>
+
+                
+                        
 
 
                 <div className='my-options' id='my-options'>
