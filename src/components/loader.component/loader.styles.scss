@@ -1,0 +1,19 @@
+
+@keyframes blink {
+    50% {
+        opacity: 0
+    }
+    80% {
+        opacity: .5
+    }
+}
+.blink {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    animation: blink 2s linear infinite;
+}
+
+
